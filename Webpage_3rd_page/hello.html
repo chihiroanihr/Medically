@@ -1,0 +1,9 @@
+{% extends "page2.html" %}
+{% block content %}
+<h3>hello</h3>
+<ul>
+{% for member in members %}
+    <li>{{ member.name}} : {{ member.email }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
