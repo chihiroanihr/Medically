@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What is your symptom?</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+
+  <style>
+  /* Container needed to position the button. Adjust the width as needed */
+  .container {
+    position: relative;
+    width: 50%;
+  }
+
+  /* Make the image responsive */
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Style the button and place it in the middle of the container/image */
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .container .btn:hover {
+    background-color: black;
+
+
+    .modal-container{
+      position:fixed;
+      background-color: white;
+      width:70%;
+      max-width: :400px;
+      left:50%;
+      padding: 20px;
+      border-radius:5px;
+
+      -webkit-transform: translate(-50%, -200%) ;
+      -ms-transform: translate(-50%, -200%) ;
+      transform: translate(-50%,-200%);
+
+      -webkit-transition:-webkit-transform 200ms ease-out;
+      transition:transform 200ms ease-out;
+
+
+    }
+
+    .modal:before{
+      content:"";
+      position:fixed;
+      display:none;
+      background-color: rgba(0,0,0,.8);
+      top:0;
+      left:0;
+      height: 100%;
+      width:100%
+
+    }
+
+    .modal:target:before{
+      display: block;
+    }
+
+    .modal:target .modal-container{
+      top:20%;
+
+      -webkit-transform: translate(-50%, 0) ;
+      -ms-transform: translate(-50%, 0) ;
+      transform: translate(-50%,0);
+
+    }
+  }
+  </style>
+
+
+  <body id="body_part">
+    <!--<div id="main">
+  </div>-->
+
+  <!--div styleを使えば、CSSファイルをHTMLファイルに埋め込むことなくCSSを適用できる-->
+    <div id="headInp" style="visibility:hidden;">
+      <div class="modal-container">
+          <p>Write your head related symptoms:</p>
+          <input type="text" name="sym"<br>
+          <button type="button" name="button">Submit</button><br>
+          <a href="#modal-close">Close</a>
+      </div>
+    </div>
+
+    <div id="shoulderInp" style="visibility:hidden;">
+      <div class="modal-container">
+          <p>Write your shoulder related symptoms:</p>
+          <input type="text" name="sym"<br>
+          <button type="button" name="button">Submit</button><br>
+          <a href="#modal-close">Close</a>
+      </div>
+    </div>
+
+    <div id="stomachInp" style="visibility:hidden;">
+      <div class="modal-container">
+          <p>Write your stomach related symptoms:</p>
+          <input type="text" name="sym"<br>
+          <button type="button" name="button">Submit</button><br>
+          <a href="#modal-close">Close</a>
+      </div>
+    </div>
+
+    <div id="legsInp" style="visibility:hidden;">
+      <div class="modal-container">
+          <p>Write your leg related symptoms:</p>
+          <input type="text" name="sym"<br>
+          <button type="button" name="button">Submit</button><br>
+          <a href="#modal-close">Close</a>
+      </div>
+    </div>
+
+    <div id="backInp" style="visibility:hidden;">
+      <div class="modal-container">
+          <p>Write your back related symptoms:</p>
+          <input type="text" name="sym"<br>
+          <button type="button" name="button">Submit</button><br>
+          <a href="#modal-close">Close</a>
+      </div>
+    </div>
+
+  </body>
+
+
+<script>
+  function addinput() {
+    var i = document.createElement("input");
+    i.setAttribute("placeholder", "what is your symptom?");
+    var element = document.getElementById("");
+    element.appendChild(i);
+  }
+
+  function showdiv(div) {
+    var element = document.getElementById(div);
+    element.style.visibility = "visible"
+  }
+
+</script>
+
+
+
+
+<br>
+<!--<a href="https://atom.io">Link to atom :)</a>-->
+
+<button type="button" name="" onclick="showdiv('headInp')">head</button>
+<button type="button" name="" onclick="showdiv('shoulderInp')">shoulders</button>
+<button type="button" name="" onclick="showdiv('stomachInp')">stomach</button>
+<button type="button" name="" onclick="showdiv('legsInp')">legs</button>
+<button type="button" name="" onclick="showdiv('backInp')">back</button>
+<!-- <script src="script.js"> -->
+</body>
+
+</html>
